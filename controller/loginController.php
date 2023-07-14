@@ -8,17 +8,19 @@ if ($_POST) {
     $senha = $_POST['senha'];
     
     //abrir a conexao
+    $dados = array('email' => 'admin@admin', 'senha' => 'administrador');
     //executar a consulta
     
-    if ($email == 'a@a' && $senha == '123') {
+    if ($email == $dados['email'] && $senha == $dados['senha']) {
         //Login OK
         //header('location:../index.php?email='.$email.'&&senha='.$senha);
         //echo ('Usuário logado com sucesso.');
         
         //Abrir a sessão
         session_start();
-        //Criei a sesão "login "
+        //Criei a sessão "login"
         $_SESSION['login'] = $email;
+        
         header('location:../home.php');
     } else {
         //Login inválido 

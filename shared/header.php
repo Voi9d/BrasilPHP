@@ -17,7 +17,7 @@
                 text-align: justify;
             }
         </style>
-        
+
     </head>
     <body class="container">
         <!-- Menu -->
@@ -36,10 +36,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="carroucelPage.php">Modal Carousel </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link link-danger" style="text-decoration: none;"
-                           href="controller/LogoutController.php?cod=logout">Logout</a>
-                    </li>
+                    <?php
+                    @session_start();
+                    if($_SESSION){
+                        echo('<li class="nav-item">
+                        <a class="nav-link link-danger" 
+                        style="text-decoration: none;"
+                        href="controller/logoutController.php?cod=logout">Logout</a>
+                    </li>');
+                    }
+                    
+                    ?>
                 </ul>
             </div>
         </div>

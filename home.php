@@ -6,9 +6,9 @@
     ?>
     <h2>
         <?php
-            @session_start();
-            echo ('Bem-vindo' .$_SESSION['login']);
-            ?>
+        @session_start();
+        echo ('Bem-vindo ' . $_SESSION['login']);
+        ?>
     </h2>
     <h3>Sobre o site!!!</h3>
     <p class="text-bg-info">
